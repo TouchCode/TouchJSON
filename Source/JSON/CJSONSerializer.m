@@ -309,12 +309,18 @@ static NSData *kTrue = NULL;
 
     NSArray *theKeys = [inDictionary allKeys];
     NSEnumerator *theEnumerator = [theKeys objectEnumerator];
-    NSString *theKey = NULL;
+    id theKey = NULL;
     while ((theKey = [theEnumerator nextObject]) != NULL)
         {
         id theValue = [inDictionary objectForKey:theKey];
         
-        NSData *theKeyData = [self serializeString:theKey error:outError];
+        NSData *theKeyData = NULL;
+        if ([theKey isKindOfClass:[NSNumber class]]){
+            theKeyData= [self serializeNumber:theKey error:outError];
+        }
+        else{
+            theKeyData= [self serializeString:theKey error:outError];
+        }
         if (theKeyData == NULL)
             {
             return(NULL);
