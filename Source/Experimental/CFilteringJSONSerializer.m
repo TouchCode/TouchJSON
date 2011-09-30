@@ -13,6 +13,16 @@
 @synthesize tests;
 @synthesize convertersByName;
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        tests = [[NSSet alloc] init];
+        convertersByName = [[NSDictionary alloc] init];
+    }
+    return self;
+}
+
 - (void)dealloc
     {
     [tests release];
