@@ -287,7 +287,7 @@ static id kNSNO = NULL;
                 [self setScanLocation:theScanLocation];
                 if (outError)
                     {
-                    *outError = [self error:kJSONScannerErrorDomain description:@"kJSONScannerErrorCode_DictionaryKeyValuePairNoDelimiter"];
+                    *outError = [self error:kJSONScannerErrorCode_DictionaryNotTerminated description:@"kJSONScannerErrorCode_DictionaryKeyValuePairNoDelimiter"];
                     }
                 return(NO);
                 }
