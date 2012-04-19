@@ -458,7 +458,7 @@ static id kNSNO = NULL;
         NSString *theStringChunk = NULL;
         if ([self scanNotQuoteCharactersIntoString:&theStringChunk])
             {
-            CFStringAppend((CFMutableStringRef)objc_unretainedPointer(theString), (CFStringRef)objc_unretainedPointer(theStringChunk));
+            CFStringAppend((__bridge CFMutableStringRef)theString, (__bridge CFStringRef)theStringChunk);
             }
         else if ([self scanCharacter:'\\'] == YES)
             {
@@ -519,7 +519,7 @@ static id kNSNO = NULL;
                     }
                     break;
                 }
-            CFStringAppendCharacters((CFMutableStringRef)objc_unretainedPointer(theString), &theCharacter, 1);
+            CFStringAppendCharacters((__bridge CFMutableStringRef)theString, &theCharacter, 1);
             }
         else
             {

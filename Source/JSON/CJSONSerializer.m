@@ -177,7 +177,7 @@ static NSData *kTrue = NULL;
     {
     #pragma unused (outError)
     NSData *theResult = NULL;
-    switch (CFNumberGetType((CFNumberRef)objc_unretainedPointer(inNumber)))
+    switch (CFNumberGetType((__bridge CFNumberRef)inNumber))
         {
         case kCFNumberCharType:
             {
