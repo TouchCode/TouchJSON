@@ -166,6 +166,6 @@ at all possible.
 ## Date Formats
 
 JSON doesn't specify a date encoding format. As such various methods are used. As such TouchJSON
-doesn't dictate which format you use. ISO 8601 style dates (with as much precession as needed) are
-recoemmended. See <http://en.wikipedia.org/wiki/ISO_8601>. You can use the CFilteringJSONSerializer
+doesn't dictate which format you use. ISO 8601 style dates (with as much precision as needed) are
+recommended. See <http://en.wikipedia.org/wiki/ISO_8601>. You can use the CFilteringJSONSerializer
 class to automatically serialize Cocoa's NSDate objects into ISO-8601 strings
