@@ -1,2 +1,1 @@
-# TouchJSON
-mParticle Bugbounty POC by @nvk0x
+# mParticle Bugbounty POC by @nvk0x
